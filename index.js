@@ -20,7 +20,7 @@ const generateAccessToken = (req, res) => {
     //set response header
     res.header('Acess-Control-Allow-Origin', '*');
     // get channel name
-    const channelName = 'voice-call';
+    const channelName = req.query.channelName;
 
     if (!channelName) {
         return res.status(500).json({ 'error': 'channel is required' });
