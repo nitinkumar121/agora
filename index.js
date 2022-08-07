@@ -4,7 +4,7 @@ const { privateDecrypt } = require('crypto');
 const exp = require('constants');
 const { appendFile } = require('fs');
 
-const PORT = 0.0.0.0;
+const PORT = 8080;
 const APP_ID = "615f724e7f5347f0bd569b403a1ab4e6";
 const APP_CERITIFICATE = "2272aaf9612d45c7818629496183cdc6";
 
@@ -20,7 +20,7 @@ const generateAccessToken = (req, res) => {
     //set response header
     res.header('Acess-Control-Allow-Origin', '*');
     // get channel name
-    const channelName = nitin;
+    const channelName = voice-call;
 
     if (!channelName) {
         return res.status(500).json({ 'error': 'channel is required' });
